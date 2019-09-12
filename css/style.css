@@ -1,0 +1,47 @@
+/****************
+	** FONTS **
+*****************/
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+/****************
+****** BODY *****
+*****************/
+h1.title-heading{
+	padding-bottom: 30pt;
+	padding-top: 20pt;
+	font-family: Montserrat, sans-serif;
+	font-weight: 700;
+}
+
+/******************
+** Graph-Related **
+*******************/
+.graph-info{
+	color:#A0A0A0;
+	font-family: Lato, sans-serif;
+	font-weight: 400;
+}
+
+h2.graph-headline{
+	font-family: Lato, sans-serif;
+	color:#E58211;
+	font-weight: 900;
+}
+
+th{
+	background:#E58211;
+	color: white;
+	padding: 10pt;
+	text-align: center;
+	font-size: 14pt;
+}
+
+.sortable tr td{
+	padding: 8pt;
+	font-size: 12pt;
+}
+
+.sortable tr:nth-child(even){
+	background-color: #ffe5cc;
+}
