@@ -24,10 +24,10 @@
             </div>
             <div class="col-md-6 offset-2 mb-4">
                 <p class="graph-info">
-                    The Global Hunger Index (GHI) is designed to comprehensively measure and track hunger globally and by country and region. Calculated each year by the International Food Policy Research Institute (IFPRI), the GHI highlights successes and failures in hunger reduction and provides insights into the drivers of hunger. (IFPRI, 2015)
+                    The following table shows countries with an alarming hunger situation on the basis of the Global Hunger Index (GHI) scores from 1990, 2000 and 2014. The Index ranks countries on a 100-point scale, with 0 being the best score (no hunger) and 100 being the worst.
                 </p>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-12 mb-5">
                 <table class="sortable" style="width:100%">
                     <tr>
                         <th>Country</th>
@@ -79,6 +79,124 @@
                     </tr>
                 </table>
             </div>
+            <div class="col-md-4 mt-5">
+                <h3 class="headline-3"> How <strong>GHI</strong> has progressed over the recent years</h3>
+                <p class = "graph-info"> Click on the interatcive chart to see how the Global Hunger Index has changed over the recent years in the coutries with alarming hunger situation. Click on the table above to order them based on relevant parameters. The current graph has been constructed using chart.js</p>
+                <p class="graph-info">The Global Hunger Index (GHI) is designed to comprehensively measure and track hunger globally and by country and region. Calculated each year by the International Food Policy Research Institute (IFPRI), the GHI highlights successes and failures in hunger reduction and provides insights into the drivers of hunger. (IFPRI, 2015)</p>
+            </div>
+            <div class="col-md-7 mt-5 offset-1">
+                <!-- for some reason chart.js needs the script to be before the canvas declaration -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
+                <canvas id="chart" height="700pt" ></canvas>
+                <script>
+                var ctx = document.getElementById('chart').getContext('2d');
+                var lineChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        /*
+                        */
+                        labels: ['1990', '2000', '2014'],
+                        datasets: [{
+                            label: 'Central African Republic',
+                            data: [51.9, 51.4, 46.9],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0)',
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(255, 99, 132, 1)',
+                            ],
+                            borderWidth: 2
+                        }, {
+                            label: 'Chad',
+                            data: [65, 52, 46.4],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0)',
+                            ],
+                            borderColor: [
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(54, 162, 235, 1)',
+                            ],
+                            borderWidth: 2
+                        },{
+                            label: 'Haiti',
+                            data: [52.1, 42.8, 37.3],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0)',
+                            ],
+                            borderColor: [
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(255, 206, 86, 1)',
+                            ],
+                            borderWidth: 2
+                        },{
+                            label: 'Madagascar',
+                            data: [44.8, 44.1, 36.3],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0)',
+                            ],
+                            borderColor: [
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(153, 102, 255, 1)',
+                            ],
+                            borderWidth: 2
+                        },{
+                            label: 'Sierra Leone',
+                            data: [58.8, 53.5, 38.9],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0)',
+                            ],
+                            borderColor: [
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(75, 192, 192, 1)',
+                            ],
+                            borderWidth: 2
+                        },{
+                            label: 'Zambia',
+                            data: [47, 50.9, 41.1],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0)',
+                            ],
+                            borderColor: [
+                                'rgba(255, 159, 64, 1)',
+                                'rgba(255, 159, 64, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 2
+                        },{
+                            label: 'East Timor',
+                            data: [0, 0, 40.7],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0)',
+                            ],
+                            borderColor: [
+                                'rgba(204, 0, 204, 1)',
+                                'rgba(204, 0, 204, 1)',
+                                'rgba(204, 0, 204, 1)',
+                            ],
+                            borderWidth: 2
+                        },]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,  
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+                </script>
+            </div>
             <div class="col-md-12 mt-5 mb-4 text-center">
                 <hr>
                 <h2 class="section-headline">2. Visualizations Critique</h2>
@@ -92,6 +210,7 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -105,6 +224,9 @@
                     </div>
                     <div class="carousel-item">
                         <img class="d-block h-50" src="img/rent_or_buy400.png" alt="Second Good">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block h-50" src="img/dinosaur_400.png" alt="Third Good">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -121,7 +243,6 @@
         <div class="row mb-5 mt-5 mb-5 align-items-center">
             <div id="img1" class="col-md-4 mb-5 ">
                 <button id="btn1" class="btn btn-outline-info sizeControl enlarge mb-4">Enlarge</button>
-
                 <a href="https://viz.wtf/post/185180504504/adds-up-to-98-and-smallest-slice-is-56" target="_blank"> <img src="img/broken_pie.png" class="img-fluid" style="width:100%" alt=""></a>
             </div>
             <div id="description1" class="col-md-8 mb-5">
@@ -146,13 +267,13 @@
             <div id='description2' class="col-md-8">
                 <h4> Bad #2</h4>
                 <p class="graph-info">
-                    In this case there are some good things about this graph: the style is pretty consistent throughout all the charts, we can see right away that we are comparing various categories that people shop for online in the Nordic countries, so the question this graph is attempting to answer is pretty clear. The problems come when they tried to break up the shopping per category:  
+                    In this case there are some good things about this graph: the style is pretty consistent throughout all the charts, we can see right away that we are comparing various categories that people shop for online in the Nordic countries, so the question this graph is attempting to answer is pretty clear. The problems come when they tried to break up the shopping per category:
                 </p>
                 <ul>
                     <li class="graph-info"><strong>The percentages don't add up to 100%.</strong> If you take a closer look at the graph, you will notice that the percentages don't add up to 100, which again is very confusing. Since they asked a sample of people what they bought online in the last month in each country, the percentages would never add up to 100. </li>
                     <li class="graph-info"><strong>The icons in the center of the graphs are distracting</strong> The icons in the center of each graph are pretty distracting for me and completely irrelevant to the numbers and the data. This can be significantly simplified.</li>
                     <li class="graph-info"><strong>Broken down by category, not by country</strong> What are we trying to compare here? What people in the different countries shop for compared to the other countries? If so it would make much more sense to normalize the percentages and see how the countries compare to one another. Yet, if we are trying to see what percentage of people shop for what within the country, we should break the graphs down by country.</li>
-                    </ul>
+                </ul>
                 <p class="comment">
                     <strong>Comment: </strong>My first suggestion would be to use a bar graph. My second suggestion would be to get rid of the unnecessary icons in the middle. My third suggestion would be grouping these by country and not category (we could do both and the contrast when we have a bar graph would be much clearer). If the author wants to show the difference between the countries I would really suggest normalizing the data so it adds up to 100, however that would bring up other problems (maybe fewer Finns buy electronics online than Swedes, yet the Finns spend more, or maybe 20% of the Denmark population is more than 30% of the Norway population, so still more people shop online in Denmark). The source of the graph is: <a href="https://getdolphins.com/blog/worst-graphs-of-2018/"> this link</a>.
                 </p>
@@ -162,7 +283,6 @@
         <div class="row mb-5 mt-5 mb-5 align-items-center ">
             <div id="img3" class="col-md-4 mb-5 ">
                 <button id="btn3" class="btn btn-outline-info sizeControl enlarge mb-4">Enlarge</button>
-
                 <a href="https://fivethirtyeight.com/features/the-45-best-and-weirdest-charts-we-made-in-2018/" target="_blank"> <img src="https://fivethirtyeight.com/wp-content/uploads/2018/10/skelley-HOUSE-MAPS-1-2.png?w=575" class="img-fluid" style="width:100%" alt=""></a>
             </div>
             <div id="description3" class="col-md-8 mb-5">
@@ -180,11 +300,11 @@
                     <strong>Comment: </strong>I wouldn't really change anything about this graph. The authors are clearly trying to communicate that the majority of non-white voters are Democrats. It really is very simple and understandable as it is. The source of the graph is: <a href="https://fivethirtyeight.com/features/the-45-best-and-weirdest-charts-we-made-in-2018/"> this link</a>.
                 </p>
             </div>
-            <div id="img4" class="col-md-4">
+            <div id="img4" class="col-md-4 mb-5">
                 <button id="btn4" class="btn btn-outline-info sizeControl enlarge mb-4">Enlarge</button>
                 <a href=" https://www.nytimes.com/interactive/2014/upshot/buy-rent-calculator.html" target="_blank"> <img src="img/rent_or_buy.png" class="img-fluid" alt=""></a>
             </div>
-            <div id='description4' class="col-md-8">
+            <div id='description4' class="col-md-8 mb-5">
                 <h4> Good #2</h4>
                 <p class="graph-info">
                     I love this interactive visualization by the New York Times. The question is clear: should I buy or should I rent? You get to adjust the parameters and the graph gives you an analysis of whether your expectation is better off if you rent or if you buy. I find the following extremely positive:
@@ -193,9 +313,30 @@
                     <li class="graph-info"><strong>Bar charts.</strong> The interactive bar charts help you visualize the change that you are going to see between renting and buying. They also visualize very well the factor of future discounting, the mortgage details, future appreciation or depreciation. </li>
                     <li class="graph-info"><strong>The result is clear.</strong> I love that clear result saying: if you can get the rent for X amount, then renting is better. It's clear and conveys to the user what they need and want to know. </li>
                     <li class="graph-info"><strong>No unnecessary images and information.</strong> The graph is very minimalist. It shows you what you want to know in a beutiful, interactive and easy to undertand way. It's just a grpah, why complicate it unnecessarily?</li>
-                    </ul>
+                </ul>
                 <p class="comment">
                     <strong>Comment: </strong>Overall, I think this is an amazing tool. The only thing I might change here is putting some emphasis on the stats on the side. I would like to be able to visualize better the initial, recurring and opportunity costs. I would potentially output a different set of graphs in a different color that shows these. I wouldn't change the existing graphs in any way though. I like the minimalism. The source of the graph is: <a href="https://www.nytimes.com/interactive/2014/upshot/buy-rent-calculator.html"> this link</a>.
+                </p>
+            </div>
+            <div id="img5" class="col-md-4">
+                <button id="btn5" class="btn btn-outline-info sizeControl enlarge mb-4">Enlarge</button>
+                <a href=" https://www.nytimes.com/interactive/2014/upshot/buy-rent-calculator.html" target="_blank"> <img width="100%" src="img/dinosaur.png" class="img-fluid" alt=""></a>
+            </div>
+            <div id='description5' class="col-md-8">
+                <h4> Good #3</h4>
+                <p class="graph-info">
+                    This graph is pretty cool. While it does have creative elements that help you remember it, the figures also represent a barchart. This is why I like this graph: 
+                </p>
+                <ul>
+                    <li class="graph-info"><strong>Memorability.</strong> They are comparing humans to dinosaurs, and this wouldn't have been as effective if they had just done a simple bar chart. This way the graph actually gets in your head and gives you the perspective of how much bigger the two dinosaurs would be.</li>
+                    <li class="graph-info"><strong>Clarity.</strong> This graph is super clear as to what it is trying to address: to show us how big the dinosaurs were when they roamed this earth. It's simple and easy to read and even the smallest kid would get it. </li>
+                    <li class="graph-info"><strong>No way to get confused.</strong> What do we see? A human, two dinosaurs and numbers showing the height/length of each. There is no way we can get confused as to what this graph is showing us.</li>
+                </ul>
+                <p class="comment">
+                    <strong>Comment: </strong>I think this graph is simple, elegant, and memorable. I like the color pallete, I like the human comparison, because it gives the reader context. I honestly wouldn't add or remove anything from the graph. The source of the graph is: <a href="https://fivethirtyeight.com/features/the-52-best-and-weirdest-charts-we-made-in-2016/"> this link</a>.
+                </p>
+                <p class="comment">
+                    P.S. I'm sorry for adding a third graph: I missed in the instruction that the visuals should not be interactive so I added a second non-interactive one here. Good #2 is interactive. 
                 </p>
             </div>
         </div>

@@ -1,3 +1,4 @@
+//borrowed from https://snook.ca/archives/javascript/normalize-bootstrap-carousel-heights
 function normalizeSlideHeights() {
     $('.carousel').each(function(){
       var items = $('.carousel-item', this);

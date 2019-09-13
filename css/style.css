@@ -9,77 +9,80 @@
 /****************
 ****** BODY *****
 *****************/
-h1.title-heading{
-	padding-bottom: 30pt;
-	padding-top: 20pt;
-	font-family: Montserrat, sans-serif;
-	font-weight: 700;
+h1.title-heading {
+    padding-bottom: 30pt;
+    padding-top: 20pt;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
 }
 
-h2.section-headline{
-	font-family: 'Roboto Condensed', sans-serif;
-	color: #009999;
-	text-transform: uppercase;
+h2.section-headline {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #009999;
+    text-transform: uppercase;
 }
 
-footer{
-	position: relative;
-   	bottom: 0;
-	background-color: black;
-}
-footer p{
-	color: white;
+.headline-3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+
 }
 
-.carousel-indicators{
-	filter: brightness(30%);
+footer {
+    position: relative;
+    bottom: 0;
+    background-color: black;
 }
 
-.carousel-control-next{
-	filter: brightness(30%);
+footer p {
+    color: white;
 }
 
-.carousel-control-prev{
-	filter: brightness(30%);
+.carousel-indicators {
+    filter: brightness(30%);
 }
 
-.comment{
-	color:black;
-	font-family: Lato, sans-serif;
+.carousel-control-next {
+    filter: brightness(30%);
 }
 
-/*.carousel-item img{	
-	height: 400pt !important;
-}*/
+.carousel-control-prev {
+    filter: brightness(30%);
+}
+
+.comment {
+    color: black;
+    font-family: Lato, sans-serif;
+}
 
 /******************
 ** Graph-Related **
 *******************/
-.graph-info{
-	color:#A0A0A0;
-	font-family: Lato, sans-serif;
-	font-weight: 400;
+.graph-info {
+    color: #808080;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
 }
 
-h2.graph-headline{
-	font-family: Lato, sans-serif;
-	color:#E58211;
-	font-weight: 900;
+h2.graph-headline {
+    font-family: Lato, sans-serif;
+    color: #E58211;
+    font-weight: 900;
 }
 
-th{
-	background:#E58211;
-	color: white;
-	padding: 10pt;
-	text-align: center;
-	font-size: 14pt;
+th {
+    background: #E58211;
+    color: white;
+    padding: 10pt;
+    text-align: center;
+    font-size: 14pt;
 }
 
-.sortable tr td{
-	padding: 8pt;
-	font-size: 12pt;
+.sortable tr td {
+    padding: 8pt;
+    font-size: 12pt;
 }
 
-.sortable tr:nth-child(even){
-	background-color: #ffe5cc;
+.sortable tr:nth-child(even) {
+    background-color: #ffe5cc;
 }

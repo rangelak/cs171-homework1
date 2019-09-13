@@ -13,16 +13,16 @@ $(".sizeControl").click(function() {
     var desc = document.getElementById(descId);
 
     if (btn.classList.contains('enlarge')) {
-    	btn.classList.remove('enlarge');
-    	btn.classList.add('shrink');
+    	btn.classList.remove('enlarge', 'btn-outline-info');
+    	btn.classList.add('shrink', 'btn-info');
     	btn.innerText="Shrink";
         img.classList.remove('col-md-4');
         img.classList.add('col-md-8');
         desc.classList.remove('col-md-8');
         desc.classList.add('col-md-4');
     } else {
-        btn.classList.remove("shrink")
-        btn.classList.add('enlarge');
+        btn.classList.remove("shrink", "btn-info")
+        btn.classList.add('enlarge', "btn-outline-info");
         btn.innerText="Enlarge";
         img.classList.remove('col-md-8');
         img.classList.add('col-md-4');
