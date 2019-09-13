@@ -1,8 +1,10 @@
 /****************
 	** FONTS **
+	> Roboto condensed
+	> Montserrat
+	> Lato
 *****************/
-@import url('https://fonts.googleapis.com/css?family=Lato:400,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Condensed|Lato:400,900&display=swap');
 
 /****************
 ****** BODY *****
@@ -13,6 +15,42 @@ h1.title-heading{
 	font-family: Montserrat, sans-serif;
 	font-weight: 700;
 }
+
+h2.section-headline{
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #009999;
+	text-transform: uppercase;
+}
+
+footer{
+	position: relative;
+   	bottom: 0;
+	background-color: black;
+}
+footer p{
+	color: white;
+}
+
+.carousel-indicators{
+	filter: brightness(30%);
+}
+
+.carousel-control-next{
+	filter: brightness(30%);
+}
+
+.carousel-control-prev{
+	filter: brightness(30%);
+}
+
+.comment{
+	color:black;
+	font-family: Lato, sans-serif;
+}
+
+/*.carousel-item img{	
+	height: 400pt !important;
+}*/
 
 /******************
 ** Graph-Related **
